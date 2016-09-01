@@ -6,16 +6,14 @@ $(function () {
         });
     };
     new SwapTab(".tab-nav", "a", ".tab-content", "ul", "active");
-    
-//    $(".flag li").on("click", function () {
-//            var exit = $("#clickOrder").find("a[href='" + $(this).find('a').attr('href') + "']");
-//            if (exit.length == 0) {
-//                $("#clickOrder").prepend($(this).clone());
-//            }
-//        });
-//    $(document).on("click", ".clear", function () {
-//        var T = $(this).clone();
-//        $("#clickOrder").html("").prepend(T);
-//    });
-});
 
+    $.event.special.copy.options = {
+          hoverClass: "hover",
+          activeClass: "active"
+        };
+    $("body").on("copy", ".clickCopy", function (e) {
+        e.clipboardData.clearData();
+        e.clipboardData.setData("text/plain", $(this).data("zclip-text"));
+        e.preventDefault();
+    });
+});

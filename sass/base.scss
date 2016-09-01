@@ -16,12 +16,21 @@ a:hover {
     color: #fa5e20
 }
 
+.clickCopy {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    cursor: pointer;
+}
+
 table {
     min-width: 40%;
     border-spacing: 0;
     border-collapse: collapse;
     border: 2px solid #95b3d7;
     margin-bottom: 10px;
+    background-color: #ffffff;
     th {
         line-height: 27px;
         white-space: nowrap;
@@ -39,21 +48,35 @@ table {
         text-indent: 1em;
         padding-right: 1em;
     }
-    td:hover {
+    td.hover {
         background-color: #95b3d7;
         color: #ffffff
+    }
+    td.active {
+        font-size: 1.4em;
+        color: #00EE00;
+    }
+    td {
+        a.hover {
+            color: #fa5e20;
+        }
     }
 }
 
 .container {
+    width: 100%;
+    min-width: 250px + 888px + 20px;
     height: 100%;
+    position: relative;
 }
 
+$sidebar_w:22%;
 .sidebar {
     background-color: #ffffff;
     position: fixed;
     top: 0px;
-    width: 250px;
+    width: $sidebar_w;
+    min-width: 250px;
     height: 100%;
     border: 3px solid #95b3d7;
     border-top: 0px;
@@ -62,6 +85,16 @@ table {
     -webkit-box-shadow: 0px 0px 3px #000000;
     box-shadow: 0px 0px 3px #000000;
 }
+.main {
+    position: absolute;
+    left: $sidebar_w + 1;
+    width: 100% - $sidebar_w - 1;
+    min-width: 888px;
+    float: left;
+    height: 100%;
+    
+}
+
 
 .submenu {
     margin-top: 3px;
@@ -89,6 +122,7 @@ table {
     a.active {
         background-color: #95b3d7;
     }
+    a.hover,
     a:hover {
         background-color: #5a92d6;
     }
@@ -110,6 +144,7 @@ table {
             list-style: none;
             line-height: 25px;
             border-bottom: 1px solid #95b3d7;
+            position: relative;
             i {
                 display: inline-block;
                 width: 35px;
@@ -118,11 +153,18 @@ table {
                 color: #95b3d7;
             }
             a {
+                width: 80%;
+                position: absolute;
+                margin-left: 0px;
                 text-decoration: none;
             }
-        }
-        li:hover a {
-            color: #fa5e20
+            a.hover {
+                color: #fa5e20;
+            }
+            a.active {
+                color: #00EE00;
+                font-size: 1.1em;
+            }
         }
     }
 }
@@ -137,12 +179,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-.main {
-    width: 100%;
-    padding-left: 265px;
-    float: left;
-    height: 100%;
-}
 
 .copyinfo {
     width: 256px;

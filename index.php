@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/base.min.css">
 </head>
 <body>
+
 <?php
 require 'libs.class.php';
 $m = new tabinfo();
@@ -26,6 +27,7 @@ if (is_null($tablefileds) || count($tables) == 0) {
 }
 if($empty == false){
 ?>
+
 <div class="container">
     <div class="sidebar">
         <div class="submenu">
@@ -41,7 +43,7 @@ if($empty == false){
                 foreach ($tables as $val) {
                     ?>
                     <li><i><?php echo $isn; ?></i>
-                        <a href='#<?php echo $val['Name']; ?>' class="clickCopy"><?php echo $val['Name']; ?></a></li>
+                        <a href='#<?php echo $val['Name']; ?>' data-zclip-text="<?php echo $val['Name']; ?>"  class="clickCopy"><?php echo $val['Name']; ?></a></li>
                     <?php
                     $isn++;
                 }
@@ -52,7 +54,7 @@ if($empty == false){
                 $isn = 1;
                 foreach ($tables as $val) { ?>
                     <li><i><?php echo $isn; ?></i>
-                        <a href='#<?php echo $val['Name']; ?>'
+                        <a href='#<?php echo $val['Name']; ?>' data-zclip-text="<?php echo $val['Name']; ?>" 
                            class="clickCopy"><?php echo strlen($val['Comment']) ? $val['Comment'] : $val['Name']; ?></a>
                     </li>
                     <?php $isn++;
@@ -85,7 +87,7 @@ if($empty == false){
                 ?>
                 <tr>
                     <td><?php echo $tableid; ?></td>
-                    <td><a href='#<?php echo $val['Name']; ?>' class="clickCopy"><?php echo $val['Name']; ?></a></td>
+                    <td><a href='#<?php echo $val['Name']; ?>' data-zclip-text="<?php echo $val['Name']; ?>" class="clickCopy"><?php echo $val['Name']; ?></a></td>
                     <td><?php echo $val['Engine']; ?></td>
                     <td class="clickCopy"><?php echo $val['Comment']; ?></td>
                     <td><a href="#<?php echo $val['Name']; ?>">查看</a></td>
@@ -113,20 +115,23 @@ if($empty == false){
                     </tr>
                     <?php foreach ($val['field'] as $v) { ?>
                         <tr>
-                            <td class="clickCopy"><?php echo $v['COLUMN_NAME']; ?></td>
+                            <td class="clickCopy" data-zclip-text="<?php echo $v['COLUMN_NAME']; ?>"><?php echo $v['COLUMN_NAME']; ?></td>
                             <td>
                                 <?php echo $v['COLUMN_TYPE']; ?>
                             </td>
                             <td>
                                 <?php echo $v['COLUMN_KEY'] . $v['COLUMN_DEFAULT']; ?>
                             </td>
-                            <td class="clickCopy"><?php echo $v['COLUMN_COMMENT']; ?></td>
+                            <td class="clickCopy" data-zclip-text="<?php echo $v['COLUMN_COMMENT']; ?>"><?php echo $v['COLUMN_COMMENT']; ?></td>
                         </tr>
                     <?php } ?>
                 </table>
             <?php }
         } ?>
     </div>
+     
+      
+      
       <div class="copyinfo">
         ©2016 lilei mailTo:lonisy#163.com version:<?php echo SOFT_VERSION; ?>
     </div>
@@ -135,6 +140,7 @@ if($empty == false){
 <h2 style="text-align: center">数据库连接错误 或 无任何表结构!</h2>
 <?php } ?>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.zeroclipboard/jquery.zeroclipboard.min.js"></script>
 <script type="text/javascript" src="js/base.min.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
