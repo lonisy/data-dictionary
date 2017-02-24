@@ -1,4 +1,24 @@
-MySQL 数据库字典
-====================================
-本文档是为了方便Web开发中查看数据库结构而开发的数据库字典程序. 目前最先版本 2.0
+# data-dictionary-vue
 
+> A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+https://github.com/zeroclipboard/zeroclipboard
+http://zeroclipboard.org/#demo
+
+https://clipboardjs.com/
