@@ -87,7 +87,6 @@ class initdata
     {
         if (is_array($array)) {
             file_put_contents('data.json', json_encode($array, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-            file_put_contents('data.js', "var mysqldata=".json_encode($array));
         }
     }
 }
