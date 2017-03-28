@@ -63,7 +63,7 @@
 							<tbody>
 							<tr v-for="(value, key, index) in mysqldata.tables">
 								<td>{{ index+1 }}</td>
-								<td><p  class="copy" v-on:click="CopyThat(key,$event)">{{ key }}</p></td>
+								<td><p class="copy" v-on:click="viewTable(key,$event)">{{ key }}</p></td>
 								<td>{{ value.engine }}</td>
 								<td class="copy" v-on:click="CopyThat(value.comment,$event)">{{ value.comment }}</td>
 							</tr>
@@ -113,8 +113,6 @@
 
 <script type="text/ecmascript-6">
 	import Clipboard from 'clipboard'
-//	var Mysql = require('../data/data.js');
-
 	export default {
 		name: 'Dictionary',
 		data () {
@@ -162,7 +160,7 @@
 				}
 				app.tableListView = false;
 				app.tableDescView = false;
-				// 判断是否为空历史
+
 				if (app.emptyHistory) {
 					app.emptyHistory = false;
 				}
@@ -172,10 +170,7 @@
 					app.clickHistory[tablename] = app.mysqldata.tables[tablename];
 					app.clickHistory[tablename].pv = 1;
 				}
-				// 显示该表字段信息
 				app.viewTableFields(tablename);
-
-				console.log(this.clickHistory);
 			},
 			viewTableFields: function (tablename) {
 				let app = this;
@@ -187,7 +182,6 @@
 					app.tableDescView = true;
 
 				}, 20);
-//				console.log(app.currentTableData);
 			},
 			viewTableList: function () {
 				let app = this;
@@ -223,7 +217,6 @@
 			}
 		},
 		beforeCreate: function () {
-			// 不能调用 methods 内的方法
 			let app = this;
 			app.axios.get('data/data.json?t=' + (new Date()).valueOf()).then(function (response) {
 				app.mysqldata = response.data;
@@ -244,8 +237,6 @@
 				this.tableListView = true;
 
 			}, 20);
-
-//			console.log(clipboard)
 		}
 	}
 </script>
