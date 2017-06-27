@@ -39,9 +39,9 @@ $this->charset = 'your charset';
 
 ## Related 
 
-[zeroclipboard](https://github.com/zeroclipboard/zeroclipboard)
-[zeroclipboard-demo](http://zeroclipboard.org/#demo)
-[clipboardjs](https://clipboardjs.com/)
+[zeroclipboard](https://github.com/zeroclipboard/zeroclipboard)    
+[zeroclipboard-demo](http://zeroclipboard.org/#demo)    
+[clipboardjs](https://clipboardjs.com/)    
 
 
 
