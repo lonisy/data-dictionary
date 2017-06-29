@@ -1,7 +1,7 @@
 
 data-dictionary
 ==========
-Mysql Database Dictionary - 一个简单易用的Mysql数据库字典程序
+Mysql Database Dictionary - 简单易用的Mysql数据库字典程序
 
 > A Vue.js project
 
