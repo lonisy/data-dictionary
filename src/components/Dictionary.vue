@@ -108,6 +108,7 @@
 			<div v-on:click="viewTableList">显示首页</div>
 			<div v-on:click="makeData">生成数据</div>
 		</div>
+		<div class="beta-bar"><a href="https://github.com/lonisy/data-dictionary">Fork Github</a></div>
 	</div>
 </template>
 
@@ -240,3 +241,21 @@
 		}
 	}
 </script>
+<style>
+	.beta-bar {
+		position: fixed;
+		bottom: 0;
+		right: 0px;
+		padding: 8px 0;
+		z-index: 999;
+		width: 200px;
+		background-color: #4f81bd;
+		color: #fff;
+		text-align: center;
+		transform: translate3d(60px,-24px,0) rotate(-45deg);
+	}
+	.beta-bar a{
+		color: #fff;
+		text-decoration: none;
+	}
+</style>
