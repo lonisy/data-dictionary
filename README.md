@@ -11,7 +11,7 @@ Mysql Database Dictionary - 简单易用的Mysql数据库字典程序
 + 访问 dist 中的 index.html 点击右侧生成数据即可
 
 ## 其他
-+ 点击表名或字段名 即为实现复制操作
++ 双击表名或字段名, 即为复制操作
 
 ## Build Setup
 
