@@ -7,8 +7,11 @@ Mysql Database Dictionary - 简单易用的Mysql数据库字典程序
 
 ## 使用方法
 + 复制 dist 目录到开发环境中
-+ 修改 dist/data/initdata.php 中的 mysql 数据库配置信息
++ 修改 `dist/data/initdata.php` 中的 mysql 数据库配置信息
 + 访问 dist 中的 index.html 点击右侧生成数据即可
+
+## 其他功能
++ 点击表名或字段名 即为实现复制操作
 
 ## Build Setup
 
