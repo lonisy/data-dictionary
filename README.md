@@ -6,7 +6,7 @@ Mysql Database Dictionary - 简单易用的Mysql数据库字典程序
 > A Vue.js project
 
 ## 使用
-+ 复制 dist 目录到开发环境中
++ 复制 dist 目录到开发环境中 [点击下载](https://github.com/lonisy/data-dictionary/blob/archives/data-dictionary.zip)
 + 修改 `dist/data/initdata.php` 中的 mysql 数据库配置信息
 + 访问 dist 中的 index.html 点击右侧生成数据即可
 
