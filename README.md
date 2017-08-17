@@ -6,8 +6,8 @@ Mysql Database Dictionary - 简单易用的Mysql数据库字典程序
 > A Vue.js project
 
 ## 使用
-1. 生成数据库字典文件需要 php 环境, 请留意
-2. 复制 dist 目录到开发环境中 [点击下载](https://github.com/lonisy/data-dictionary/raw/archives/data-dictionary.zip)
+1. 复制 dist 目录到开发环境中 [点击下载](https://github.com/lonisy/data-dictionary/raw/archives/data-dictionary.zip)
+2. 生成数据库字典文件需要 php 环境, 请留意
 3. 修改 `dist/data/initdata.php` 中的 mysql 数据库配置信息
 4. 访问 dist 中的 index.html 点击右侧生成数据即可
 
