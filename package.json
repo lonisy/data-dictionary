@@ -9,7 +9,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.15.3",
+    "axios": ">=0.18.1",
     "clipboard": "^1.5.16",
     "tooltips": "^1.1.2",
     "vue": "^2.1.0",

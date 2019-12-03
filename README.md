@@ -21,6 +21,9 @@ Mysql Database Dictionary - 简单易用的Mysql数据库字典程序
 # install dependencies
 sudo npm install
 
+# npm install : gyp ERR! configure error ....  https://www.jianshu.com/p/ef1e66e703dc
+sudo npm install --unsafe-perm
+
 # serve with hot reload at localhost:8080
 sudo npm run dev
 
