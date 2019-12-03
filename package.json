@@ -16,6 +16,9 @@
     "vue-axios": "^1.2.2"
   },
   "devDependencies": {
+    "lodash.merge": ">=4.6.2",
+    "braces": ">=2.3.1",
+    "js-yaml": ">=3.13.1",
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
