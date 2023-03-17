@@ -68,7 +68,7 @@ class initdata
         if (empty($tableName)) return false;
         $sql = "SELECT ORDINAL_POSITION,COLUMN_NAME, COLUMN_TYPE, COLUMN_KEY, COLUMN_DEFAULT," .
             "COLUMN_COMMENT FROM information_schema.`COLUMNS` " .
-            "WHERE TABLE_NAME = '" . $tableName . "' AND TABLE_SCHEMA='" . $this->database_name . "'";
+            "WHERE TABLE_NAME = '" . $tableName . "' AND TABLE_SCHEMA='" . $this->database_name . "' ORDER BY ORDINAL_POSITION ASC";
         $data = $this->db->query($sql)->fetchAll();
         $fields = array();
         if (isset($data[0])) {
